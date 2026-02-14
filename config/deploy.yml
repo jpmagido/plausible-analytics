@@ -48,8 +48,8 @@ accessories:
     host: 142.93.233.128
     port: "127.0.0.1:8123:8123"
     env:
-      secret:
-        - CLICKHOUSE_PASSWORD
+      clear:
+        CLICKHOUSE_SKIP_USER_SETUP=1
     directories:
       - event-data:/var/lib/clickhouse
       - event-logs:/var/log/clickhouse-server
