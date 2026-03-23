@@ -1,5 +1,5 @@
 service: analytics
-image: jpmagido/plausible_analytics
+image: jagamio/plausible_analytics
 
 servers:
   web:
@@ -56,4 +56,6 @@ accessories:
     files:
       - ./clickhouse/logs.xml:/etc/clickhouse-server/config.d/logs.xml:ro
       - ./clickhouse/ipv4-only.xml:/etc/clickhouse-server/config.d/ipv4-only.xml:ro
+      - ./clickhouse/low-resources.xml:/etc/clickhouse-server/config.d/low-resources.xml:ro
+      - ./clickhouse/default-profile-low-resources-overrides.xml:/etc/clickhouse-server/users.d/default-profile-low-resources-overrides.xml:ro
 
